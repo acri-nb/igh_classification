@@ -4,9 +4,9 @@ Deep learning pipeline for classifying sequencing reads as IGH (immunoglobulin h
 
 This repository accompanies the manuscript:
 
-> Gayap H. *et al.* **Machine learning-based classification of IGHV mutation status in CLL from whole-genome sequencing data.** *(submitted)*
+> Darmendre J. *et al.* **Machine learning-based classification of IGHV mutation status in CLL from whole-genome sequencing data.** *(submitted)*
 
-Pre-trained model weights are available on Hugging Face: [acri-nb/igh_classification_fttransformer](https://huggingface.co/acri-nb/igh_classification_fttransformer)
+Pre-trained model weights are available on Hugging Face: [gth-ai/igh_classification_fttransformer](https://huggingface.co/gthai/igh_classification_fttransformer)
 
 ---
 
@@ -182,7 +182,7 @@ python analyse_result.py \
 
 Pre-trained FT-Transformer weights for all 61 configurations (11 fixed-total-size + 50 progressive training) are available on Hugging Face:
 
-**[acri-nb/igh_classification_fttransformer](https://huggingface.co/acri-nb/igh_classification_fttransformer)**
+**[gth-ai/igh_classification_fttransformer](https://huggingface.co/gthai/igh_classification_fttransformer)**
 
 ### Loading a checkpoint
 
@@ -218,12 +218,12 @@ The recommended checkpoint is `progressive_training/real_150000/synth_100pct_150
 If you use this code or the pre-trained weights, please cite:
 
 ```bibtex
-@article{gayap2025igh,
+@article{darmendre2025igh,
   title   = {Machine learning-based classification of IGHV mutation status
              in CLL from whole-genome sequencing data},
-  author  = {Gayap, Hadrien and others},
+  author  = {Darmendre, Jessica and others},
   journal = {(submitted)},
-  year    = {2025}
+  year    = {2026}
 }
 ```
 
