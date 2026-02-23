@@ -1,0 +1,6 @@
+>J00232|IGHD2-2*01|Homo sapiens|F|D-REGION|29..59|31 nt|2| | | | |31+0=31| | |
+aggatattgtagtagtaccagctgctatgcc
+>X97051|IGHD2-2*02|Homo sapiens|F|D-REGION|36367..36397|31 nt|1| | | | |31+0=31| | |
+aggatattgtagtagtaccagctgctatacc
+>M35648|IGHD2-2*03|Homo sapiens|F|D-REGION|70..100|31 nt|1| | | | |31+0=31| | |
+tggatattgtagtagtaccagctgctatgcc

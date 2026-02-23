@@ -1,0 +1,6 @@
+>J00256|IGHJ4*01|Homo sapiens|F|J-REGION|1912..1959|48 nt|3| | | | |48+0=48| | |
+actactttgactactggggccaaggaaccctggtcaccgtctcctcag
+>X86355|IGHJ4*02|Homo sapiens|F|J-REGION|1480..1527|48 nt|3| | | | |48+0=48| | |
+actactttgactactggggccagggaaccctggtcaccgtctcctcag
+>M25625|IGHJ4*03|Homo sapiens|F|J-REGION|446..493|48 nt|3| | | | |48+0=48| | |
+gctactttgactactggggccaagggaccctggtcaccgtctcctcag

@@ -15,9 +15,14 @@ Pre-trained model weights are available on Hugging Face: [gth-ai/igh_classificat
 The pipeline consists of three stages:
 
 ```
-FASTA reads
-    │
-    ▼
+                      IMGT alleles (V, D, J)
+                            │
+                            ▼
+[0] Synthetic data generation (V(D)J recombination simulator)
+    │  synthetic IGH reads (.fasta)         real WGS reads (.fasta)
+    │                                            │
+    └──────────────────┬─────────────────────────┘
+                       ▼
 [1] Preprocessing (BioAutoML-based feature extraction)
     │  464 numerical descriptors per read
     ▼
@@ -42,6 +47,10 @@ FASTA reads
 igh_classification/
 ├── README.md
 ├── requirements.txt
+├── combinatorics/                   # Synthetic IGH V(D)J recombination simulator
+│   ├── combinatorics.py
+│   ├── input/                       # IMGT V, D, J allele FASTA files
+│   └── true_neg/                    # True negative read generator
 ├── preprocessing/                   # Feature extraction (BioAutoML-based)
 │   ├── README.md
 │   ├── FE-BioAutoMl_gth.py          # Feature extraction script
@@ -80,6 +89,23 @@ pip install -r requirements.txt
 ---
 
 ## Usage
+
+### 0. Synthetic data generation (optional)
+
+Generate labeled synthetic IGH reads to augment the training set. The [`combinatorics/`](combinatorics/) module simulates V(D)J recombination (exonuclease trimming, P/N nucleotide addition, somatic hypermutation) and produces fixed-length reads centered on the junction. A companion script generates true negative reads from a reference genome. See [`combinatorics/README.md`](combinatorics/README.md) for full details and parameters.
+
+```bash
+# True positives — synthetic IGH reads
+python combinatorics/combinatorics.py \
+    -vf combinatorics/input/all/IGHV_all.txt \
+    -df combinatorics/input/all/IGHD_all.txt \
+    -jf combinatorics/input/all/IGHJ_all.txt \
+    -rl 100 -pid 0.9 -o synthetic_tp/
+
+# True negatives — random genomic reads (IGH locus masked)
+python combinatorics/true_neg/true_negatives.py \
+    -i /path/to/genome.fna -rl 100 -nc 1000 -g hg38 -o synthetic_tn/
+```
 
 ### 1. Preprocessing
 
@@ -208,7 +234,7 @@ The recommended checkpoint is `progressive_training/real_150000/synth_100pct_150
 
 ## Data
 
-- **Synthetic sequences**: generated with the V(D)J recombination simulator in [`togit/combinatorics`](../combinatorics) using alleles from [IMGT/GENE-DB](https://www.imgt.org/genedb/).
+- **Synthetic sequences**: generated with the V(D)J recombination simulator in [`combinatorics/`](combinatorics/) using alleles from [IMGT/GENE-DB](https://www.imgt.org/genedb/).
 - **Real sequences**: ICGC-CLL Genome cohort (accessed via [ICGC Data Portal](https://dcc.icgc.org/)) and CLL patient samples from Georges-L.-Dumont University Hospital Centre (Moncton, NB, Canada).
 
 ---

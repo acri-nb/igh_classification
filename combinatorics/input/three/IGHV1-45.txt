@@ -1,0 +1,19 @@
+>X92209|IGHV1-45*01|Homo sapiens|F|V-REGION|144..439|296 nt|1| | | | |296+0=296| | |
+cagatgcagctggtgcagtctggggctgaggtgaagaagactgggtcctcagtgaaggtt
+tcctgcaaggcttccggatacaccttcacctaccgctacctgcactgggtgcgacaggcc
+cccggacaagcgcttgagtggatgggatggatcacacctttcaatggtaacaccaactac
+gcacagaaattccaggacagagtcaccattactagggacaggtctatgagcacagcctac
+atggagctgagcagcctgagatctgaggacacagccatgtattactgtgcaagana
+>AB019438|IGHV1-45*02|Homo sapiens|F|V-REGION|126317..126612|296 nt|1| | | | |296+0=296| | |
+cagatgcagctggtgcagtctggggctgaggtgaagaagactgggtcctcagtgaaggtt
+tcctgcaaggcttccggatacaccttcacctaccgctacctgcactgggtgcgacaggcc
+cccggacaagcgcttgagtggatgggatggatcacacctttcaatggtaacaccaactac
+gcacagaaattccaggacagagtcaccattaccagggacaggtctatgagcacagcctac
+atggagctgagcagcctgagatctgaggacacagccatgtattactgtgcaagata
+>IMGT000112|IGHV1-45*03|Homo sapiens|F|V-REGION|330703..330998|296 nt|1| | | | |296+0=296| | |
+cagatgcagctggtgcagtctggggctgaggtgaagaagactgggtcctcagtgaaggtt
+tcctgcaaggcttccggatacaccttcacctaccgctacctgcactgggtgcgacaggcc
+cccagacaagcgcttgagtggatgggatggatcacacctttcaatggtaacaccaactac
+gcacagaaattccaggacagagtcaccattaccagggacaggtctatgagcacagcctac
+atggagctgagcagcctgagatctgaggacacagccatgtattactgtgcaagata
+
